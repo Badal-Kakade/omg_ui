@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import Form from './form/Form';
+import { StateProvider } from './Context';
+import DbAxios from './dbconnection/DbAxios'
+import Template from './form/Template';
 
 function App() {
+  const [page, setPage] = useState('form');
+
+    
+  const handlePageForm = () =>{
+    setPage('form');
+  }
+  const handlePageTemplate = () =>{
+    setPage('template');
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateProvider>
+      <div className="App">
+        {page === 'form' && (<Form handlePageTemplate={handlePageTemplate}/>)}
+        {page === 'template' && (<Template handlePageForm={handlePageForm}/>)}
+        {/* <DbAxios /> */}
+      </div>
+    </StateProvider>
   );
 }
 
