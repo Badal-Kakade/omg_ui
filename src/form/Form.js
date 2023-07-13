@@ -68,7 +68,6 @@ const Form = ({handlePageTemplate}) => {
           alert('Item created successfully!');
         } catch (error) {
         //   console.error('Error creating item:', error);
-        //   alert('Error creating item. Please try again.');
         }
         handlePageTemplate();
       };
