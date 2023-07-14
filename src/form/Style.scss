@@ -159,6 +159,7 @@
 }
 .hrpsitnSec{
     text-align: center;
+    min-height: 70px;
 }
 .template_omni{
     width: 600px;
@@ -190,7 +191,7 @@
         }
     }
     .ultxt{
-        margin: 0px 0px 0px -20px !important
+        margin: 0px 0px 0px -15px !important
     }
     .locSec{
         .lctnSec{
@@ -215,13 +216,14 @@
     }
     .footer{
         text-align: center;
-        margin-top: 30px !important;
+        // margin-top: 30px !important;
     }
 }
 .logoImg{
     height: 5vh;
     .imgSize{
-        width: 80%;
+        width: 20%;
+        opacity: 50%;
     }
 }
 .greentxt{
@@ -237,23 +239,33 @@
     }
 }
 .ultxt{
-    margin: 0px 0px 0px -20px !important
+    margin: 0px 0px 0px -15px !important
 }
 .locSec{
+    min-height: 135px;
     .lctnSec{
         padding-right: 3px !important;
+        border-left: 1px solid;
+        .paratxt{
+            font-size: 0.6em !important;
+            padding: 1em 0em 1em 1em;
+        }
     }
     .jdsec{
-        border-left: 1px solid;
         padding-left: 2em;
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         .MuiTypography-root{
             font-size: 0.6em !important;
         }
     }
 }
+.rlsnrespo{
+    min-height: 160px;
+}
 
 .footer{
     text-align: center;
-    margin-top: 30px !important;
+    // margin-top: 30px !important;
 }
